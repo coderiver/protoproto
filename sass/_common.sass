@@ -55,22 +55,16 @@ body
 	min-width: 1040px
 
 a
-	color: $color-blue
+	color: $color-base
 	text-decoration: none
 	&:hover
 		text-decoration: underline
-
-%h1, %h2, %h3
-	a
-		color: $color-base
-		text-decoration: none
-		&:hover
-			text-decoration: underline
 
 %h1
 	font-size: $size-h1
 	font-weight: normal
 	line-height: 1.2
+	margin-bottom: 0.7em
 .h1
 	@extend %h1
 
@@ -93,6 +87,20 @@ a
 	white-space: nowrap
 	line-height: 1
 
+label
+	display: block
+	line-height: 20px
+	margin-bottom: 5px
+	font-size: $size-base
+
+.radio
+	padding-left: 28px
+	cursor: pointer
+	input
+		position: relative
+		top: 2px
+		float: left
+		margin-left: -28px
 
 
 

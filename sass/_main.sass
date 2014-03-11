@@ -61,14 +61,176 @@
 .container
 	@extend %in
 
-.docs
-.docs__header
-	border-bottom: 1px solid $border-color-base
-.docs__items
-.docs__item
-	padding: 20px 0
-.docs__titles
+.features
+	+clr
+	margin-bottom: 50px
+.feature
+	float: left
+	background-color: $bg-gray
+	width: 280px
+	height: 280px
+	overflow: hidden
+	&.feature_long
+		width: 740px
+		.feature__picture
+			float: left
+			width: 420px
+			height: auto
+			img
+				min-height: 100%
+		.feature__content
+			overflow: hidden
+			color: $color-base
+			a
+				color: inherit
+		.feature__titles
+			@extend %h2
+		.feature__info
+			display: block
+	&.feature_extra
+		background-color: $bg-invert
+		.feature__content
+			color: $color-darkgray
+			a
+				color: inherit
+.feature__picture
+	overflow: hidden
+	img
+		display: block
+		min-width: 100%
+		height: 185px
+		margin-left: auto
+		margin-right: auto
+.feature__content
+	padding: 15px 20px
+.feature__titles
 	@extend %h3
+.feature__info
+	display: none
+.feature__author
+	font-size: 20px
+	font-style: italic
+	margin-top: 1.8em
+	margin-bottom: 0.7em
+
+.main-news
+	margin-bottom: 30px
+
+.docs
+	.hentry__item
+		padding: 20px 0
+	.hentry__titles
+		@extend %h3
+		margin-bottom: 0.2em
+
+.news
+	margin-top: -20px
+
+.hentry
+.hentry__header
+	border-bottom: 1px solid $border-color-base
+	.h1
+		line-height: 1
+.hentry__items
+.hentry__item
+	padding: 25px 0
+.hentry__titles
+	@extend %h2
+	margin-bottom: 0.5em
+
+.complementary
+	background-color: $bg-gray
+	.container
+		padding: 55px 0 105px
+
+.vote
+	position: relative
+	background-color: #f4f4f4
+	height: 280px
+.vote__in
+	padding: 15px 20px 25px
+.vote__header
+	margin-bottom: 20px
+.vote__options
+	label
+		margin-bottom: 15px
+.vote__toolbar
+	position: absolute
+	bottom: 20px
+	left: 20px
+	right: 20px
+.vote__archive
+	float: right
+
+.sites
+	margin: 60px auto
+.sites__items
+	+clr
+	margin-left: -20px
+	margin-top: -20px
+.sites__item
+	float: left
+	width: 240px
+	margin-left: 20px
+	margin-top: 20px
+	text-transform: uppercase
+.sites__hotzone
+	position: relative
+	display: block
+	padding: 20px
+	height: 106px
+	text-decoration: none
+	border: 1px solid $border-color-base
+	&:hover
+		text-decoration: none
+		.sites__name
+			text-decoration: underline
+.sites__official
+	display: block
+	+text-overflow
+	position: absolute
+	bottom: 20px
+	left: 20px
+	right: 20px
+	line-height: 1
+	color: $color-blue
+
+
+.tab
+	margin-top: -23px
+	+clr
+	border-bottom: 1px solid $border-color-base
+.tab__item
+	float: left
+	margin: 0 0 -1px
+	background-color: $bg-base
+	border: 1px solid $border-color-base
+	border-width: 0 0 1px 1px
+	&:first-child
+		border-left: none
+		border-right: none
+		.tab__link
+			padding-left: 0
+	&.is-active
+		border-bottom-color: $bg-base
+		border-width: 0 1px 1px
+		.tab__link
+			color: $color-base
+	&:hover
+		.tab__link
+			color: $color-base
+.tab__link
+	display: block
+	padding: 16px 30px
+	text-decoration: none
+	font-size: $size-h1
+	color: $color-blue
+	text-decoration: none
+	&:hover
+		text-decoration: none
+.tab-cont
+	padding: 20px 0
+
 
 
 // sticky footer
