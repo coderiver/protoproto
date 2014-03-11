@@ -1,2 +1,78 @@
 // Normally mainpage styles
- 
+.topline
+	background-color: $darkblue
+	color: $color-grey
+	a
+		color: $color-grey
+		text-decoration: none
+		&:hover
+			color: $color-light
+.topline__in
+	@extend %in
+	height: 60px
+	line-height: 60px
+.topline__symbol
+	display: inline-block
+	vertical-align: middle
+	margin-right: 30px
+	a
+		display: block
+		+s(symbol)
+.topline__menu
+	display: inline-block
+	// vertical-align: top
+	ul
+		+clr
+	li
+		// font-size: 14px
+		display: inline-block
+		// vertical-align: top
+		margin-left: 30px
+		&:first-child
+			margin-left: 0
+
+.header
+.header__in
+	@extend %in
+	padding: 55px 0
+.header__logo
+	display: inline-block
+	vertical-align: top
+	background: url(../img/icons/flag.png) no-repeat 0 0
+	min-height: 60px
+	padding-left: 30px
+	line-height: 1.1
+	font-size: 30px
+	a
+		color: $color-base
+		text-decoration: none
+
+.page
+.container
+	@extend %in
+
+// sticky footer
+.out
+	min-height: 100%
+	height: auto !important
+	height: 100%
+	margin: 0 auto -60px
+.footer, .push
+	height: 60px
+
+.footer
+	background-color: $darkblue
+	color: $color-grey
+	a
+		color: $color-grey
+		text-decoration: none
+		&:hover
+			color: $color-light
+.footer__in
+	@extend %in
+	height: 60px
+	line-height: 60px
+.footer__copy
+	display: inline-block
+.footer__search
+	float: right

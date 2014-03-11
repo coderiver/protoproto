@@ -34,16 +34,29 @@
 //     @each $s in a,b,c
 // 	    	#{$s}
 //				display: none
-// ## fonts 
+// ## fonts
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
+// +font(book, cytiapro-black-webfont)
 // =book
-// 	font-family: "book",arial,sans-serif 
-	
-body
-	font-size: 12px 
-	font-family: Arial, sans-serif 
-	line-height: 1.4
+// 	font-family: "book",arial,sans-serif
 
+body
+	background-color: $bg-base
+	font-size: 12px
+	font-family: Arial, sans-serif
+	line-height: 1.4
+	color: $color-base
+	min-width: 1040px
+
+a
+	color: $link-base
+	text-decoration: none
+	&:hover
+		text-decoration: underline
+
+%in
+	width: 1020px
+	margin-left: auto
+	margin-right: auto
 
 // common blocks
