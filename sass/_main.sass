@@ -1,49 +1,58 @@
 // Normally mainpage styles
 .topline
-	background-color: $darkblue
-	color: $color-grey
+	background-color: $bg-invert
+	color: $color-gray
 	a
-		color: $color-grey
+		color: $color-gray
 		text-decoration: none
 		&:hover
-			color: $color-light
+			color: $color-lightgray
 .topline__in
 	@extend %in
 	height: 60px
 	line-height: 60px
 .topline__symbol
-	display: inline-block
-	vertical-align: middle
-	margin-right: 30px
+	float: left
+	margin: 12px 15px 0 0
 	a
 		display: block
 		+s(symbol)
 .topline__menu
-	display: inline-block
-	// vertical-align: top
+	float: left
 	ul
 		+clr
 	li
-		// font-size: 14px
-		display: inline-block
-		// vertical-align: top
-		margin-left: 30px
-		&:first-child
-			margin-left: 0
+		display: block
+		float: left
+		font-size: $size-l
+		&.is-active
+			a
+				color: $color-lightgray
+		a
+			display: block
+			padding: 21px 15px
+			line-height: 18px
 
 .header
-.header__in
 	@extend %in
-	padding: 55px 0
+.header__in
+	margin: 55px 0
 .header__logo
+	position: relative
 	display: inline-block
-	vertical-align: top
-	background: url(../img/icons/flag.png) no-repeat 0 0
-	min-height: 60px
-	padding-left: 30px
+	vertical-align: middle
 	line-height: 1.1
-	font-size: 30px
+	font-size: $size-h1
+	&:before
+		position: absolute
+		top: 50%
+		margin-top: -30px
+		left: 0
+		content: ""
+		+s(flag)
 	a
+		display: block
+		padding-left: 30px
 		color: $color-base
 		text-decoration: none
 
@@ -61,13 +70,13 @@
 	height: 60px
 
 .footer
-	background-color: $darkblue
-	color: $color-grey
+	background-color: $bg-invert
+	color: $color-gray
 	a
-		color: $color-grey
+		color: $color-gray
 		text-decoration: none
 		&:hover
-			color: $color-light
+			color: $color-lightgray
 .footer__in
 	@extend %in
 	height: 60px
