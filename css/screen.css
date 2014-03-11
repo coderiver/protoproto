@@ -94,7 +94,7 @@ label { display: block; line-height: 20px; margin-bottom: 5px; font-size: 14px; 
 
 .main-news { margin-bottom: 30px; }
 
-.docs .hentry__item { padding: 20px 0; }
+.docs .hentry__header { margin-bottom: 0.3em; }
 .docs .hentry__titles { margin-bottom: 0.2em; }
 
 .news { margin-top: -20px; }
@@ -102,7 +102,7 @@ label { display: block; line-height: 20px; margin-bottom: 5px; font-size: 14px; 
 .hentry__header { border-bottom: 1px solid #dadce0; }
 .hentry__header .h1 { line-height: 1; }
 
-.hentry__item { padding: 25px 0; }
+.hentry__item { padding: 20px 0; }
 
 .hentry__titles { margin-bottom: 0.5em; }
 
