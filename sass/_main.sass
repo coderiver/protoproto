@@ -2,6 +2,7 @@
 .topline
 	background-color: $bg-invert
 	color: $color-gray
+	letter-spacing: 0.005em
 	a
 		color: $color-gray
 		text-decoration: none
@@ -34,15 +35,15 @@
 			line-height: 18px
 
 .header
-	@extend %in
-.header__in
 	margin: 55px 0
+.header__in
+	@extend %in
 .header__logo
 	position: relative
 	display: inline-block
 	vertical-align: middle
-	line-height: 1.1
 	font-size: $size-h1
+	line-height: 1.1
 	&:before
 		position: absolute
 		top: 50%
@@ -60,6 +61,16 @@
 .container
 	@extend %in
 
+.docs
+.docs__header
+	border-bottom: 1px solid $border-color-base
+.docs__items
+.docs__item
+	padding: 20px 0
+.docs__titles
+	@extend %h3
+
+
 // sticky footer
 .out
 	min-height: 100%
@@ -70,8 +81,11 @@
 	height: 60px
 
 .footer
+	line-height: 60px
 	background-color: $bg-invert
+	font-size: $size-l
 	color: $color-gray
+	letter-spacing: 0.005em
 	a
 		color: $color-gray
 		text-decoration: none
@@ -79,9 +93,8 @@
 			color: $color-lightgray
 .footer__in
 	@extend %in
-	height: 60px
-	line-height: 60px
+	+clr
 .footer__copy
-	display: inline-block
+	float: left
 .footer__search
 	float: right

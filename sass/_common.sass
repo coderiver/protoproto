@@ -40,12 +40,18 @@
 // =book
 // 	font-family: "book",arial,sans-serif
 
+%in
+	width: 1020px
+	margin-left: auto
+	margin-right: auto
+
 body
 	background-color: $bg-base
 	font-size: $size-base
 	font-family: $font-base
 	line-height: 1.4
 	color: $color-base
+	letter-spacing: -0.025em
 	min-width: 1040px
 
 a
@@ -54,20 +60,38 @@ a
 	&:hover
 		text-decoration: underline
 
-%in
-	width: 1020px
-	margin-left: auto
-	margin-right: auto
+%h1, %h2, %h3
+	a
+		color: $color-base
+		text-decoration: none
+		&:hover
+			text-decoration: underline
 
-// common blocks
-.h1
+%h1
 	font-size: $size-h1
-.h2
+	font-weight: normal
+	line-height: 1.2
+.h1
+	@extend %h1
+
+%h2
 	font-size: $size-h2
-.h3
+	font-weight: bold
+	line-height: 1.2
+.h2
+	@extend %h2
+
+%h3
 	font-size: $size-h3
+	font-weight: bold
+	line-height: 1.2
+.h3
+	@extend %h3
 
-
+.g-date
+	font-size: $size-sm
+	white-space: nowrap
+	line-height: 1
 
 
 
